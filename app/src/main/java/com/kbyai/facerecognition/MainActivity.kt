@@ -94,6 +94,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == SELECT_PHOTO_REQUEST_CODE && resultCode == RESULT_OK) {
             try {
                 var bitmap: Bitmap = Utils.getCorrectlyOrientedImage(this, data?.data!!)
@@ -110,7 +111,6 @@ class MainActivity : AppCompatActivity() {
                 } else {
                     val faceImage = Utils.cropFace(bitmap, faceBoxes[0])
                     val templates = FaceSDK.templateExtraction(bitmap, faceBoxes[0])
-
                     dbManager.insertPerson("Person" + Random.nextInt(10000, 20000), faceImage, templates)
                     personAdapter.notifyDataSetChanged()
                     Toast.makeText(this, getString(R.string.person_enrolled), Toast.LENGTH_SHORT).show()

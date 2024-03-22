@@ -47,15 +47,6 @@
                 app:srcCompat="@drawable/ic_tip"
                 tools:ignore="ContentDescription" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_toRightOf="@+id/imageNotice"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp"
-                android:text="We offer SDKs for face recognition, liveness detection, and ID card recognition."></TextView>
         </RelativeLayout>
 
     </androidx.cardview.widget.CardView>
@@ -128,18 +119,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        >
-
-        <ImageView
-            android:id="@+id/imageBrand"
-            android:layout_width="100dp"
-            android:layout_height="25dp"
-            android:layout_marginBottom="10dp"
-            app:srcCompat="@drawable/ic_kby"
-            >
-        </ImageView>
-
-    </LinearLayout>
+        />
 
     <ListView
         android:id="@+id/listPerson"

@@ -15,6 +15,7 @@ import android.util.Log;
 import android.util.Size;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -253,7 +254,6 @@ public class CameraActivity extends AppCompatActivity {
                                 intent.putExtra("yaw", faceBox.yaw);
                                 intent.putExtra("roll", faceBox.roll);
                                 intent.putExtra("pitch", faceBox.pitch);
-
                                 startActivity(intent);
                             }
                         });
