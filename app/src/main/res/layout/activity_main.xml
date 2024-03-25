@@ -34,7 +34,9 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            >
 
             <ImageView
                 android:id="@+id/imageNotice"
@@ -97,6 +99,7 @@
             android:layout_height="48dp"
             android:layout_marginRight="10dp"
             android:layout_weight="0.5"
+            android:visibility="gone"
             android:text="Settings"
             app:icon="@drawable/ic_settings" />
 
@@ -107,6 +110,7 @@
             android:layout_height="48dp"
             android:layout_marginLeft="10dp"
             android:layout_weight="0.5"
+            android:visibility="gone"
             android:text="About"
             app:icon="@drawable/ic_about" />
     </LinearLayout>
